@@ -19,5 +19,4 @@ housing.hist(bins=50, figsize=(12, 8))
 plt.show()
 
 
-![Figure 1](images/Figure_1.png)
 
