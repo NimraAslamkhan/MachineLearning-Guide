@@ -17,3 +17,6 @@ housing = load_housing_data()
 import matplotlib.pyplot as plt
 housing.hist(bins=50, figsize=(12, 8))
 plt.show()
+
+
+![Alt Text](C:\Users\123\Pictures\Figure_1.png)
