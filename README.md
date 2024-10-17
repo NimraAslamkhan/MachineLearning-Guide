@@ -10,20 +10,30 @@ Welcome to the **Hands-On Machine Learning** repository! This project is based o
 ---
 
 ## 📚 Libraries Used
+
 In this repository, we will explore and implement machine learning algorithms using the following libraries:
 
-- **Scikit-Learn**: A powerful and user-friendly library for machine learning in Python.
-- **Keras**: A high-level deep learning API that simplifies building neural networks.
-- **TensorFlow**: A comprehensive library for large-scale machine learning and deep learning.
+| Library | Description |
+|---------|-------------|
+| ![Scikit-Learn](https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg) | **Scikit-Learn**: A powerful and user-friendly library for machine learning in Python. |
+| ![Keras](https://github.com/user-attachments/assets/d57811d4-fcc5-4c72-a27a-540695b3edab) | **Keras**: A high-level deep learning API that simplifies building neural networks. |
+| ![TensorFlow](https://github.com/user-attachments/assets/bc43e48b-96e1-4b60-93b8-2e309598ab4b) | **TensorFlow**: A comprehensive library for large-scale machine learning and deep learning. |
+
+
 
 ---
 
 ## ⚙️ Prerequisites
+
 Before diving into the code, ensure you have the following prerequisites:
 
-- Basic knowledge of Python programming
-- Familiarity with libraries such as NumPy, Pandas, and Matplotlib
-- Understanding of fundamental mathematical concepts like linear algebra and calculus
+| Icon | Requirement |
+|------|-------------|
+| ![Python](https://img.icons8.com/ios-filled/50/000000/python.png) | **Basic knowledge of Python programming** |
+| ![NumPy](https://github.com/user-attachments/assets/da7ca6b5-1ab1-41dd-b6ac-cb918db7efa2) | **Familiarity with libraries such as NumPy, Pandas, and Matplotlib** |
+| ![Math](https://img.icons8.com/ios-filled/50/000000/math.png) | **Understanding of fundamental mathematical concepts like linear algebra and calculus** |
+
+Make sure you have these skills to fully benefit from the code examples and projects in this repository!
 
 ---
 
