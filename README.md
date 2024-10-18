@@ -64,11 +64,8 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                           | Loading and preprocessing large amounts of data efficiently                            | [Link](#) |
 |                                           | Training and deploying TensorFlow models at scale                                      | [Link](#) |
 
-## 🚀 Getting Started
-To start using the code examples, open the Jupyter notebooks in your browser. You can run the code cells interactively and modify them as needed to gain a deeper understanding of the algorithms.
 
-```bash
-jupyter notebook
+---
 
 
 <p align="center">
@@ -77,25 +74,17 @@ jupyter notebook
 
 <p align="center">
   <a href="mailto:nimraaslam3132@gmail.com">
-    <img height="30" src="https://img.shields.io/badge/gmail-c14438?&style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+    <img height="30" src="https://img.shields.io/badge/gmail-c14438?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
   </a>
-  
   <a href="https://www.linkedin.com/in/nimra-aslam-9652b3247">
-    <img height="30" src="https://img.shields.io/badge/linkedin-blue.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img height="30" src="https://img.shields.io/badge/linkedin-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
-  
   <a href="https://github.com/NimraAslamkhan">
-    <img height="30" src="https://img.shields.io/badge/github-black.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img height="30" src="https://img.shields.io/badge/github-333?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 </p>
 
 <hr />
 
-
-  
-
-
 <h3 align="center">Show some &nbsp;🔍&nbsp; by starring some of the repositories!</h3>
-
-
 
