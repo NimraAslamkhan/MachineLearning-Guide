@@ -45,7 +45,7 @@ The book is organized into two parts, each covering essential topics in machine 
 
 | Part                                      | Topics                                                                                  | Links   |
 |-------------------------------------------|-----------------------------------------------------------------------------------------|---------|
-| **Part I: The Fundamentals of Machine Learning** | What machine learning is, problems it solves, and main categories                     | [Link](#) |
+| **Part I: The Fundamentals of Machine Learning** | What machine learning is, problems it solves, and main categories                     | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/What%20machine%20learning%20is%2C%20problems%20it%20solves%2C%20and%20main%20categories) |
 |                                           | Steps in a typical machine learning project                                             | [Link](#) |
 |                                           | Learning by fitting a model to data                                                    | [Link](#) |
 |                                           | Optimizing a cost function                                                               | [Link](#) |
