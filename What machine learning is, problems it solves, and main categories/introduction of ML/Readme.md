@@ -1,18 +1,5 @@
-# Machine Learning Project Overview
 
-## Table of Contents
-1. [What Is Machine Learning?](#what-is-machine-learning)
-2. [Why Use Machine Learning?](#why-use-machine-learning)
-    - [Automated Learning](#automated-learning)
-    - [Better Performance & Simplicity](#better-performance--simplicity)
-3. [Data Mining](#data-mining)
-4. [Examples of Applications](#examples-of-applications)
-5. [Types of Machine Learning Systems](#types-of-machine-learning-systems)
-    - [Based on Training Supervision](#based-on-training-supervision)
-    - [Based on Learning Incrementally](#based-on-learning-incrementally)
-    - [Based on Learning Approach](#based-on-learning-approach)
-
----
+# Machine Learning Overview
 
 ## What Is Machine Learning?
 
@@ -21,8 +8,6 @@ Machine learning is the **science (and art)** of programming computers so they c
 The part of a machine learning system that **learns and makes predictions** is called a **model**. 
 
 **Neural Networks** and **Random Forests** are examples of models.
-
----
 
 ## Why Use Machine Learning?
 
@@ -34,13 +19,9 @@ ML-based spam filters automatically detect patterns in spam emails by comparing 
 
 ML models are **easier to maintain**, **shorter in code**, and **generally more accurate** because they continuously improve based on the data.
 
----
-
 ## Data Mining
 
 ML models can be inspected to understand what features (e.g., certain words) are the best predictors for spam, often revealing new trends. This process of discovering hidden patterns in large datasets is called **data mining**.
-
----
 
 ## Examples of Applications
 
@@ -58,11 +39,7 @@ ML models can be inspected to understand what features (e.g., certain words) are
     - Can be tackled using **Recurrent Neural Networks (RNNs)**, **CNNs**, or **Transformers** for better performance.
     - *Example:* Sentiment analysis, spam detection.
 
----
-
 ## Types of Machine Learning Systems
-
-Machine learning systems can be categorized based on the following criteria:
 
 ### Based on Training Supervision
 
@@ -105,6 +82,5 @@ Machine learning systems can be categorized based on the following criteria:
 ---
 
 ## Project Structure
-
 
 Model-Based Learning: Models generalize patterns from the training data to make predictions (e.g., linear regression, neural networks).
