@@ -1,4 +1,4 @@
-# 📘 README: Introduction to Machine Learning
+# 📘 Machine Learning
 
 ## 📝 Chapter Overview
 Welcome to the **Introduction to Machine Learning** chapter! This chapter introduces the basic principles of machine learning, covering the essential topics needed to understand and build machine learning models.
