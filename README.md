@@ -69,7 +69,7 @@ The book is organized into two parts, each covering essential topics in machine 
 When learning about machine learning, experimenting with real-world data is essential, as it provides a more practical understanding than artificial datasets. Fortunately, there are thousands of open datasets available across various domains. Here are a few resources to find data:
 
 ### Popular Open Data Repositories
-
+- **[Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://learning.oreilly.com/library/view/-/9781492032632/?_gl=1*1wnadcf*_ga*MjA2OTAyNTAwNy4xNzI5MjMxNTUx*_ga_092EL089CH*MTcyOTIzMTU1MS4xLjEuMTcyOTIzMTcxMC42MC4wLjA.)**: A book that help you to learn ML.
 - **[OpenML](https://www.openml.org)**: A platform for sharing datasets, machine learning algorithms, and experiments.
 - **[Kaggle](https://www.kaggle.com/datasets)**: A well-known community for data science and machine learning, offering a variety of datasets and competitions.
 - **[Papers With Code](https://paperswithcode.com/datasets)**: A resource that connects papers with their associated code and datasets.
