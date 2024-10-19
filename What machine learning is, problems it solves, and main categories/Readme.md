@@ -46,7 +46,7 @@ Imagine you are building a model to predict housing prices. Here’s a breakdown
 - **Test Evaluation**: Test the final model on the unseen test data to estimate real-world performance.
 
 ## 📂 File Structure
-- **/coding**: Contains the code examples, scripts for training, validation, and evaluation.
+- **/coding**[link](https://github.com/NimraAslamkhan/MachineLearning-Guide/blob/main/What%20machine%20learning%20is%2C%20problems%20it%20solves%2C%20and%20main%20categories/introduction%20to%20ML/code_examples.ipynb): Contains the code examples, scripts for training, validation, and evaluation
 - **/theory**: Contains theoretical notes, summaries of ML concepts such as generalization error, model tuning, and overfitting.
 - **README.md**: This file provides an overview of the chapter and instructions for understanding and navigating the folder.
 
