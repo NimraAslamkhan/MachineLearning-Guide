@@ -1,6 +1,4 @@
-# California Housing Prices Model
 
-Welcome to the **California Housing Prices Prediction** project! In this project, we aim to predict the median housing prices of districts in California using census data, including metrics such as population, median income, and median house value. The model you develop will help a Machine Learning system assess the investment potential of different districts. 
 
 ## Table of Contents
 - [Project Overview](#project-overview)
