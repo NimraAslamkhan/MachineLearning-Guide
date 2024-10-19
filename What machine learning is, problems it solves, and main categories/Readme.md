@@ -3,7 +3,7 @@
 ## 📝 Chapter Overview
 Welcome to the **Introduction to Machine Learning** chapter! This chapter introduces the basic principles of machine learning, covering the essential topics needed to understand and build machine learning models.
 - [**/theory**](https://github.com/NimraAslamkhan/MachineLearning-Guide/blob/main/What%20machine%20learning%20is%2C%20problems%20it%20solves%2C%20and%20main%20categories/introduction%20to%20ML/theory.md) Contains theoretical notes, summaries of ML concepts such as generalization error, model tuning, and overfitting.
-- - [**/coding**](https://github.com/NimraAslamkhan/MachineLearning-Guide/blob/main/What%20machine%20learning%20is%2C%20problems%20it%20solves%2C%20and%20main%20categories/introduction%20to%20ML/code_examples.ipynb): Contains the code examples, scripts for training, validation, and evaluation
+- [**/coding**](https://github.com/NimraAslamkhan/MachineLearning-Guide/blob/main/What%20machine%20learning%20is%2C%20problems%20it%20solves%2C%20and%20main%20categories/introduction%20to%20ML/code_examples.ipynb): Contains the code examples, scripts for training, validation, and evaluation
 ## 📚 Topics Covered
 
 ### 🔍 1. What is Machine Learning?
