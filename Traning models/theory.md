@@ -1,21 +1,74 @@
 ![Mind Map of Chapter 4 Concepts](https://github.com/user-attachments/assets/2a08c2e4-8cf4-4d27-9924-e8166154d40b)
 
 # Training models of  Machine Learning
+<h2>Linear Regression Model</h2>
+<p>This project demonstrates the implementation of a Linear Regression Model to predict a target variable based on input features using Python. Key methods such as the Normal Equation and Pseudoinverse Approach (SVD) are used to find the model parameters. The Mean Squared Error (MSE) is used as the cost function to evaluate the performance of the model.</p>
+
+<h2>Overview</h2>
+<p>Linear regression models the relationship between the features (independent variables) and the target (dependent variable) using a linear equation:</p>
+<p class="formula">$$\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n$$</p>
+
+<p>Where:</p>
+<ul>
+    <li><code>ŷ</code> is the predicted value.</li>
+    <li><code>θ₀</code> is the bias (intercept).</li>
+    <li><code>θ₁, ..., θₙ</code> are the feature weights (slopes).</li>
+    <li><code>x₁, ..., xₙ</code> are the feature values.</li>
+</ul>
+
+<h2>Cost Function</h2>
+<p>The Mean Squared Error (MSE) is used as the cost function to measure how well the model fits the training data:</p>
+<p class="formula">$$MSE(θ) = \frac{1}{m} \sum_{i=1}^{m} \left( θ^T x^{(i)} - y^{(i)} \right)^2$$</p>
+
+<p>Where:</p>
+<ul>
+    <li><code>m</code> is the number of training examples.</li>
+    <li><code>x^{(i)}</code> is the feature vector for the <code>i</code>-th example.</li>
+    <li><code>y^{(i)}</code> is the actual target value for the <code>i</code>-th example.</li>
+    <li><code>θ</code> represents the model parameters.</li>
+</ul>
+
+<p>The goal of the model is to minimize this cost function by finding the optimal values of <code>θ</code>.</p>
+
+<h2>Methods to Find Optimal Parameters</h2>
+
+<h3>1. Normal Equation</h3>
+<p>The Normal Equation provides a closed-form solution to find the optimal parameters <code>θ</code> by minimizing the cost function:</p>
+<p class="formula">$$θ = (X^T X)^{-1} X^T y$$</p>
+
+<p>Where:</p>
+<ul>
+    <li><code>X</code> is the matrix of features.</li>
+    <li><code>y</code> is the vector of target values.</li>
+</ul>
+
+<p>The Normal Equation avoids the need for iterative methods like Gradient Descent but can be computationally expensive for large datasets.</p>
+
+<h3>2. Pseudoinverse Approach (SVD)</h3>
+<p>Scikit-Learn uses Singular Value Decomposition (SVD) to compute the pseudoinverse of the feature matrix <code>X</code>:</p>
+<p class="formula">$$θ = X^+ y$$</p>
+
+<p>This method is more numerically stable and is reliable when the matrix <code>X^T X</code> is singular or non-invertible.</p>
+
+<h2>Gradient Descent Optimization</h2>
+
+<h3>Introduction</h3>
+<p>Gradient descent is an optimization algorithm used to minimize a cost function. It iteratively updates model parameters to find the minimum value of the cost function.</p>
+
+<h3>Analogy</h3>
+<p>Imagine being lost in the mountains: you feel the slope of the ground and move in the direction of the steepest decline until you reach the lowest point (the valley). Gradient descent follows a similar approach by calculating the gradient (slope) of the cost function with respect to parameters and moving downhill.</p>
+
+<h3>Random Initialization</h3>
+<p>The optimization process begins with random values for the parameters (<code>θ</code>).</p>
+
+<h3>Learning Rate (η)</h3>
+<p>The size of each step taken towards the minimum is controlled by the learning rate:</p>
+<ul>
+    <li>If <code>η</code> is too small, convergence is slow.</li>
+    <li>If <code>η</code> is too large, the algorithm may diverge and fail to converge.</li>
+</ul>
 
 
-## 1. Closed-form Solution
-A **closed-form solution** refers to calculating the optimal parameters directly using mathematical formulas, typically involving matrix operations. It is efficient for small datasets but becomes impractical for large datasets due to computational complexity.
-
-## 02. Gradient Descent
-**Gradient Descent** # Gradient Descent Optimization
-
-## Introduction
-
-Gradient descent is an optimization algorithm used to minimize a cost function. It iteratively updates model parameters to find the minimum value of the cost function.
-
-## Analogy
-
-Imagine being lost in the mountains: you feel the slope of the ground and move in the direction of the steepest decline until you reach the lowest point (the valley). Gradient descent follows a similar approach by calculating the gradient (slope) of the cost function with respect to parameters and moving downhill.
 
 ## Random Initialization
 
