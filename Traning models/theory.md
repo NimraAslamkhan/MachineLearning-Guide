@@ -145,8 +145,38 @@ This method is more numerically stable and is reliable when the matrix $X^T X$ i
 - **Coefficients**: These represent the weights assigned to the input features.
 - **Intercept**: The constant term that determines where the line crosses the y-axis.
 
-## 7. Polynomial Regression
-**Polynomial Regression** is an extension of linear regression that models nonlinear relationships by adding polynomial terms to the features. This allows the model to fit more complex curves and capture nonlinear patterns in the data.
+## 03. Polynomial Regression
+# High-Degree Polynomial Regression
+
+High-degree polynomial regression can closely fit training data but may severely overfit, as illustrated by a 300-degree polynomial model compared to simpler models (linear and quadratic). The goal is to find a balance in model complexity that provides good generalization performance.
+
+## Overfitting vs. Underfitting
+
+- **Overfitting**: The model performs well on training data but poorly on validation data.
+- **Underfitting**: The model performs poorly on both training and validation data.
+
+## Learning Curves
+
+Learning curves provide insight into how a model learns. They show how training error and validation error change as more training data is used. Plotting training and validation errors against the number of training instances helps identify these issues.
+
+### Scikit-Learn's `learning_curve` Function
+
+The `learning_curve` function in Scikit-Learn is useful for generating learning curves and assessing model performance. It allows you to visualize the training and validation errors as the model is trained on increasing amounts of training data.
+
+## Bias-Variance Trade-Off
+
+Understanding the bias-variance trade-off is crucial for model evaluation:
+
+- **Bias**: Error due to incorrect assumptions in the model (e.g., assuming linearity when data is quadratic). High bias leads to underfitting.
+- **Variance**: Error due to excessive sensitivity to training data variations. High variance leads to overfitting.
+- **Irreducible Error**: Error inherent to the data itself, which cannot be reduced by model complexity.
+
+### Trade-Off Dynamics
+
+Increasing model complexity typically increases variance and decreases bias, while decreasing complexity has the opposite effect. Finding the right balance is essential for achieving optimal model performance.
+
+
+
 
 ## 8. Logistic Regression and Softmax Regression
 - **Logistic Regression**: Used for binary classification tasks, logistic regression models the probability that a given input belongs to a specific class (0 or 1). It uses the logistic function to map predictions to probabilities.
