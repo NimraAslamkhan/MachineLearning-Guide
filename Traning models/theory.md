@@ -59,30 +59,6 @@ The model parameters are updated using the formula:
 \theta_{\text{next step}} = \theta - \eta \nabla_\theta MSE(\theta)
 \]
 
-## Example Code
-
-Here is a simple implementation of batch gradient descent:
-
-```python
-import numpy as np
-
-# Learning rate and number of epochs
-eta = 0.1  # learning rate
-n_epochs = 1000
-
-# Number of instances
-m = len(X_b)  # Assuming X_b is your feature matrix
-
-# Randomly initialized model parameters
-np.random.seed(42)
-theta = np.random.randn(2, 1)
-
-# Gradient Descent Algorithm
-for epoch in range(n_epochs):
-    gradients = 2 / m * X_b.T @ (X_b @ theta - y)
-    theta = theta - eta * gradients
-
-
 
 
 - **Batch Gradient Descent**: Uses the entire dataset to calculate the gradients.
