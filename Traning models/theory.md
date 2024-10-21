@@ -24,7 +24,7 @@ There are two primary methods for training machine learning models:
 - **Closed-form solution**: Directly computes the optimal solution using matrix operations (e.g., Normal Equation for linear regression).
 - **Gradient Descent**: An iterative method that updates parameters to minimize the cost function.
 
-## 6. Linear Regression
+## 01. Linear Regression
 **Linear Regression** models the relationship between a dependent variable and one or more independent variables using a linear equation. It assumes that the relationship between the input variables and the output variable is linear.
 # Linear Regression Model
 
