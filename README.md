@@ -48,7 +48,7 @@ The book is organized into two parts, each covering essential topics in machine 
 | **Part I: The Fundamentals of Machine Learning** | What machine learning is, problems it solves, and main categories                     | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/What%20machine%20learning%20is%2C%20problems%20it%20solves%2C%20and%20main%20categories) |
 |                                           | Steps in a typical machine learning project                                             | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/blob/main/MLproject%20guide/Steps_of_machine_learning_project%20(1).ipynb) |
 |                                           | Learning by fitting a model to data                                                    | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Learning%20by%20fitting%20a%20model%20to%20data) |
-|                                           | Training Models                                                               | [Link](#) |
+|                                           | Training Models                                                               | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Traning%20models) |
 |                                           | Handling, cleaning, and preparing data                                                 | [Link](#) |
 |                                           | Selecting and engineering features                                                      | [Link](#) |
 |                                           | Selecting a model and tuning hyperparameters using cross-validation                     | [Link](#) |
