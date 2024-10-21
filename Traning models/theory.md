@@ -26,6 +26,69 @@ There are two primary methods for training machine learning models:
 
 ## 6. Linear Regression
 **Linear Regression** models the relationship between a dependent variable and one or more independent variables using a linear equation. It assumes that the relationship between the input variables and the output variable is linear.
+# Linear Regression Model
+
+This project demonstrates the implementation of a Linear Regression Model to predict a target variable based on input features using Python. Key methods such as the Normal Equation and Pseudoinverse Approach (SVD) are used to find the model parameters. The Mean Squared Error (MSE) is used as the cost function to evaluate the performance of the model.
+
+## Overview
+
+Linear regression models the relationship between the features (independent variables) and the target (dependent variable) using a linear equation:
+
+$$
+\hat{y} = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \ldots + \theta_n x_n
+$$
+
+Where:
+
+- $\hat{y}$ is the predicted value.
+- $\theta_0$ is the bias (intercept).
+- $\theta_1, \ldots, \theta_n$ are the feature weights (slopes).
+- $x_1, \ldots, x_n$ are the feature values.
+
+## Cost Function
+
+The Mean Squared Error (MSE) is used as the cost function to measure how well the model fits the training data:
+
+$$
+MSE(\theta) = \frac{1}{m} \sum_{i=1}^{m} \left( \theta^T x^{(i)} - y^{(i)} \right)^2
+$$
+
+Where:
+
+- $m$ is the number of training examples.
+- $x^{(i)}$ is the feature vector for the $i$-th example.
+- $y^{(i)}$ is the actual target value for the $i$-th example.
+- $\theta$ represents the model parameters.
+
+The goal of the model is to minimize this cost function by finding the optimal values of $\theta$.
+
+## Methods to Find Optimal Parameters
+
+### 1. Normal Equation
+
+The Normal Equation provides a closed-form solution to find the optimal parameters $\theta$ by minimizing the cost function:
+
+$$
+\theta = (X^T X)^{-1} X^T y
+$$
+
+Where:
+
+- $X$ is the matrix of features.
+- $y$ is the vector of target values.
+
+The Normal Equation avoids the need for iterative methods like Gradient Descent, but can be computationally expensive for large datasets.
+
+### 2. Pseudoinverse Approach (SVD)
+
+Scikit-Learn uses Singular Value Decomposition (SVD) to compute the pseudoinverse of the feature matrix $X$:
+
+$$
+\theta = X^+ y
+$$
+
+This method is more numerically stable and is reliable when the matrix $X^T X$ is singular or non-invertible.
+
 
 - **Coefficients**: These represent the weights assigned to the input features.
 - **Intercept**: The constant term that determines where the line crosses the y-axis.
