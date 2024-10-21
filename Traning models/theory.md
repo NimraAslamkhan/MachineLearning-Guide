@@ -45,6 +45,4 @@ To model nonlinear relationships, additional polynomial features can be added to
 
 ---
 
-Feel free to modify or expand on these explanations as necessary for your own understanding or project documentation.
-
 
