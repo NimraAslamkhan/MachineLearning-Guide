@@ -6,8 +6,84 @@
 ## 1. Closed-form Solution
 A **closed-form solution** refers to calculating the optimal parameters directly using mathematical formulas, typically involving matrix operations. It is efficient for small datasets but becomes impractical for large datasets due to computational complexity.
 
-## 2. Gradient Descent
-**Gradient Descent** is an iterative optimization algorithm used to minimize the cost function by adjusting the model parameters. It computes the gradient (or slope) of the cost function and updates the parameters in the direction of the negative gradient to reduce the error.
+## 02. Gradient Descent
+**Gradient Descent** # Gradient Descent Optimization
+
+## Introduction
+
+Gradient descent is an optimization algorithm used to minimize a cost function. It iteratively updates model parameters to find the minimum value of the cost function.
+
+## Analogy
+
+Imagine being lost in the mountains: you feel the slope of the ground and move in the direction of the steepest decline until you reach the lowest point (the valley). Gradient descent follows a similar approach by calculating the gradient (slope) of the cost function with respect to parameters and moving downhill.
+
+## Random Initialization
+
+The optimization process begins with random values for the parameters (θ).
+
+## Learning Rate (η)
+
+The size of each step taken towards the minimum is controlled by the learning rate:
+- If **η** is too small, convergence is slow.
+- If **η** is too large, the algorithm may diverge and fail to converge.
+
+## Challenges in Gradient Descent
+
+- **Local Minima**: The algorithm may converge to a local minimum instead of the global minimum.
+- **Plateaus and Irregular Terrain**: The algorithm may take a long time to converge if the cost function has flat regions.
+
+## Convexity
+
+For linear regression, the mean squared error (MSE) cost function is convex, ensuring that there is only one global minimum.
+
+## Feature Scaling
+
+To facilitate faster convergence, ensure that all features have similar scales.
+
+## Batch Gradient Descent
+
+Batch gradient descent computes the gradient of the cost function using the entire training dataset at each step:
+- It can be slow for large datasets but is efficient for high-dimensional feature spaces.
+
+## Gradient Calculation
+
+The partial derivatives of the cost function are computed for each parameter, leading to the gradient vector:
+\[
+\nabla_\theta MSE(\theta) = \frac{2}{m} X^T (X\theta - y)
+\]
+
+## Gradient Update Step
+
+The model parameters are updated using the formula:
+\[
+\theta_{\text{next step}} = \theta - \eta \nabla_\theta MSE(\theta)
+\]
+
+## Example Code
+
+Here is a simple implementation of batch gradient descent:
+
+```python
+import numpy as np
+
+# Learning rate and number of epochs
+eta = 0.1  # learning rate
+n_epochs = 1000
+
+# Number of instances
+m = len(X_b)  # Assuming X_b is your feature matrix
+
+# Randomly initialized model parameters
+np.random.seed(42)
+theta = np.random.randn(2, 1)
+
+# Gradient Descent Algorithm
+for epoch in range(n_epochs):
+    gradients = 2 / m * X_b.T @ (X_b @ theta - y)
+    theta = theta - eta * gradients
+
+
+
 
 - **Batch Gradient Descent**: Uses the entire dataset to calculate the gradients.
 - **Stochastic Gradient Descent**: Uses one data point at a time, making it faster but with more variance.
