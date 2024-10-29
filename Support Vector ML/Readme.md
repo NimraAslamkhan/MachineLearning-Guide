@@ -1,4 +1,6 @@
-# Support Vector Machines (SVMs): Comprehensive Overview
+# Support Vector Machines (SVMs): 
+![Description of the image](https://github.com/user-attachments/assets/edfc3e2b-cc13-4a28-9956-d3f73918d081)
+
 
 A detailed overview of Support Vector Machines (SVMs), covering both linear and nonlinear classifications, as well as soft margin classification, feature scaling, and the kernel trick. Below is a summary of key concepts to streamline these topics:
 
@@ -34,9 +36,9 @@ This README provides an overview of the key concepts and mechanics behind linear
 
 A linear SVM classifier separates data points into classes by creating a hyperplane that maximizes the margin (distance) between the classes. It does this by determining weights for each feature vector \( w \) and a bias term \( b \). Given a new data instance \( x \), it predicts the class label by calculating the decision function:
 
-\[
+$$
 f(x) = w^T x + b
-\]
+$$
 
 If \( f(x) \geq 0 \), the class is positive (1); otherwise, it is negative (0).
 
@@ -46,13 +48,19 @@ The goal of linear SVM training is to maximize the margin, which is equivalent t
 
 The training problem for linear SVMs can be formulated as a Quadratic Programming (QP) problem:
 
-**Objective**: Minimize \( \frac{1}{2} \| w \|^2 \), which directly controls the margin size.
+**Objective**: Minimize 
+
+$$
+\frac{1}{2} \| w \|^2
+$$
+
+which directly controls the margin size.
 
 **Constraints**: Ensure correct classification by keeping instances either above or below certain thresholds:
 
-\[
+$$
 t^{(i)} (w^T x^{(i)} + b) \geq 1 - \zeta^{(i)}
-\]
+$$
 
 where \( t^{(i)} \) is the true class label (+1 or -1). In the soft margin case, the trade-off between maximizing the margin and minimizing errors is adjusted using a hyperparameter \( C \).
 
@@ -66,13 +74,28 @@ Instead of solving the primal problem, it is sometimes computationally efficient
 
 The kernel trick enables SVMs to perform non-linear classification. Common kernels include:
 
-- **Polynomial Kernel**: \( K(a, b) = (\gamma a^T b + r)^d \)
-- **Gaussian RBF Kernel**: \( K(a, b) = \exp(-\gamma \| a - b \|^2) \)
-- **Sigmoid Kernel**: \( K(a, b) = \tanh(\gamma a^T b + r) \)
+- **Polynomial Kernel**:
+
+$$
+K(a, b) = (\gamma a^T b + r)^d
+$$
+
+- **Gaussian RBF Kernel**:
+  
+$$
+K(a, b) = \exp(-\gamma \| a - b \|^2)
+$$
+
+- **Sigmoid Kernel**:
+
+$$
+K(a, b) = \tanh(\gamma a^T b + r)
+$$
 
 These kernels allow linear algorithms to learn complex decision boundaries.
 
 ## Making Predictions with Kernel SVMs
 
 When using kernels, calculating \( w \) explicitly is unnecessary because predictions rely on support vectors and the kernel function. Given a set of support vectors and their weights from the dual solution, the decision function can predict new instances based on kernel evaluations between the instance and each support vector.
+
 
