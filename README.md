@@ -50,7 +50,7 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                           | Learning by fitting a model to data                                                    | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Learning%20by%20fitting%20a%20model%20to%20data) |
 |                                           | Training Models                                                               | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Traning%20models) |
 | **Machine Learning Algorithems**         | Support Vector ML                      | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Support%20Vector%20ML) |
-|                                           | Selecting and engineering features                                                      | [Link](#) |
+|                                          |   Decision Tree                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Decision%20Tree) |
 |                                           | Selecting a model and tuning hyperparameters using cross-validation                     | [Link](#) |
 |                                           | Challenges of machine learning: underfitting and overfitting (bias/variance trade-off) | [Link](#) |
 |                                           | Common learning algorithms: linear & polynomial regression, logistic regression, KNN, SVM, decision trees, random forests, ensemble methods | [Link](#) |
