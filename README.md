@@ -49,9 +49,9 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                           | Steps in a typical machine learning project                                             | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/blob/main/MLproject%20guide/Steps_of_machine_learning_project%20(1).ipynb) |
 |                                           | Learning by fitting a model to data                                                    | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Learning%20by%20fitting%20a%20model%20to%20data) |
 |                                           | Training Models                                                               | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Traning%20models) |
-| **Machine Learning Algorithems**         | Support Vector ML                      | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Support%20Vector%20ML) |
+| **Machine Learning Algorithems**         | Support Vector ML                     | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Support%20Vector%20ML) |
 |                                          |   Decision Tree                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Decision%20Tree) |
-|                                           | Selecting a model and tuning hyperparameters using cross-validation                     | [Link](#) |
+|                                          |  Random Forest                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Random%20Forests) |
 |                                           | Challenges of machine learning: underfitting and overfitting (bias/variance trade-off) | [Link](#) |
 |                                           | Common learning algorithms: linear & polynomial regression, logistic regression, KNN, SVM, decision trees, random forests, ensemble methods | [Link](#) |
 |                                           | Reducing dimensionality to fight the “curse of dimensionality”                        | [Link](#) |
