@@ -52,7 +52,7 @@ The book is organized into two parts, each covering essential topics in machine 
 | **Machine Learning Algorithems**         | Support Vector ML                     | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Support%20Vector%20ML) |
 |                                          |   Decision Tree                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Decision%20Tree) |
 |                                          |  Random Forest                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Random%20Forests)
-|                                          | Dimention Reduction    | [Link](#) |
+|                                          | Dimention Reduction    | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Dimensionally%20Reduction) |
 |                                          | Unsupervised learning techniques: clustering, density estimation, anomaly detection     | [Link](#) |
 | **Part II: Neural Networks and Deep Learning** | What neural nets are and their applications                                            | [Link](#) |
 |                                           | Building and training neural nets using TensorFlow and Keras                           | [Link](#) |
