@@ -51,10 +51,7 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                           | Training Models                                                               | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Traning%20models) |
 | **Machine Learning Algorithems**         | Support Vector ML                     | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Support%20Vector%20ML) |
 |                                          |   Decision Tree                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Decision%20Tree) |
-|                                          |  Random Forest                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Random%20Forests) |
-|                                           | Challenges of machine learning: underfitting and overfitting (bias/variance trade-off) | [Link](#) |
-|                                           | Common learning algorithms: linear & polynomial regression, logistic regression, KNN, SVM, decision trees, random forests, ensemble methods | [Link](#) |
-|                                           | Reducing dimensionality to fight the “curse of dimensionality”                        | [Link](#) |
+|                                          |  Random Forest                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Random%20Forests)           |                                           | Reducing dimensionality to fight the “curse of dimensionality” | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Dimensionally%20Reduction) |
 |                                           | Unsupervised learning techniques: clustering, density estimation, anomaly detection     | [Link](#) |
 | **Part II: Neural Networks and Deep Learning** | What neural nets are and their applications                                            | [Link](#) |
 |                                           | Building and training neural nets using TensorFlow and Keras                           | [Link](#) |
