@@ -54,7 +54,7 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                          |  Random Forest                       | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Random%20Forests)
 |                                          | Dimention Reduction    | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Dimensionally%20Reduction) |
 |                                          | Unsupervised learning techniques: clustering, density estimation, anomaly detection     | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Unsupervised%20learning%20techniques%3A%20clustering%2C%20density%20estimation%2C%20anomaly%20detection) |
-| **Part II: Neural Networks and Deep Learning** | What neural nets are and their applications                                            | [Link](#) |
+| **Part II: Neural Networks and Deep Learning** | What neural nets are and their applications                                            | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/neural%20nets%20are%20and%20their%20applications) |
 |                                           | Building and training neural nets using TensorFlow and Keras                           | [Link](#) |
 |                                           | Important neural net architectures: feedforward, convolutional, recurrent, LSTM, encoder-decoder, transformers, autoencoders, GANs, diffusion models | [Link](#) |
 |                                           | Techniques for training deep neural nets                                                | [Link](#) |
