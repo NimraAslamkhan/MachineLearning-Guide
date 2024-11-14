@@ -1,4 +1,6 @@
 # Artificial Neural Networks (ANNs)
+![image](https://github.com/user-attachments/assets/38bef2ad-85e6-41c2-9b11-d070c26eb8f7)
+
 
 ## Introduction
 Artificial neural networks (ANNs) are inspired by the brain’s structure, with networks of biological neurons as a model. However, ANNs have evolved beyond their biological inspiration. They are the foundation of deep learning, excelling at tasks like image classification, speech recognition, and complex games such as Go.
