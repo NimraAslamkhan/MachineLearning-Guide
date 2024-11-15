@@ -133,6 +133,46 @@ When training a regression model with noisy data:
 - **MAE (Mean Absolute Error)**: Converges slowly and may result in imprecision.
 - **Huber Loss**: Balances between MSE and MAE. Ideal for noisy datasets.
 
+# Custom Losses, Metrics, and Gradients in TensorFlow
 
+This guide explores how to implement custom losses, metrics, and gradients in TensorFlow, including handling model internals and numerical stability.
+
+---
+
+## Custom Losses and Metrics Based on Model Internals
+
+### Use Case
+Define losses and metrics based on model internals, such as hidden layer activations or weights, for tasks like regularization or monitoring.
+
+### Implementation
+- **Add a custom loss:** Use `model.add_loss()`.
+- **Track a custom metric:** Use `model.add_metric()`.
+
+### Example: Regression Model with Auxiliary Outputs
+```python
+import tensorflow as tf
+
+# Define a sample model
+inputs = tf.keras.Input(shape=(10,))
+hidden = tf.keras.layers.Dense(5, activation="relu")(inputs)
+outputs = tf.keras.layers.Dense(1)(hidden)
+
+# Auxiliary output loss (e.g., reconstruction loss)
+reconstruction_loss = tf.reduce_mean(tf.square(hidden))
+model = tf.keras.Model(inputs, outputs)
+
+# Add custom loss
+model.add_loss(0.01 * reconstruction_loss)
+
+# Add custom metric for monitoring
+model.add_metric(reconstruction_loss, name="reconstruction_loss", aggregation="mean")
+
+# Compile and train
+model.compile(optimizer="adam", loss="mse", metrics=["mae"])
+model.fit(tf.random.normal((100, 10)), tf.random.normal((100, 1)), epochs=5)
+Tips for Numerical Stability
+Use tf.add_n() to sum multiple tensors for improved precision.
+Apply gradient clipping using clipnorm or clipvalue to avoid exploding gradients.
+Use tf.reduce_mean() or similar functions cautiously to avoid vanishing or exploding losses.
 
 
