@@ -151,22 +151,27 @@ Define losses and metrics based on model internals, such as hidden layer activat
 ### Example: Regression Model with Auxiliary Outputs
 ```python
 import tensorflow as tf
-
+```
 # Define a sample model
+```python
 inputs = tf.keras.Input(shape=(10,))
 hidden = tf.keras.layers.Dense(5, activation="relu")(inputs)
 outputs = tf.keras.layers.Dense(1)(hidden)
+```
 
 # Auxiliary output loss (e.g., reconstruction loss)
+```python
 reconstruction_loss = tf.reduce_mean(tf.square(hidden))
 model = tf.keras.Model(inputs, outputs)
-
+```
 # Add custom loss
+```python
 model.add_loss(0.01 * reconstruction_loss)
-
+```
 # Add custom metric for monitoring
+```python
 model.add_metric(reconstruction_loss, name="reconstruction_loss", aggregation="mean")
-
+```
 # Compile and train
 model.compile(optimizer="adam", loss="mse", metrics=["mae"])
 model.fit(tf.random.normal((100, 10)), tf.random.normal((100, 1)), epochs=5)
