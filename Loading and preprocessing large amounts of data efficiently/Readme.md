@@ -68,36 +68,37 @@ Integration: Works seamlessly with the tf.data API for optimized data handling.
 Scalability: Allows preprocessing during training or beforehand for efficiency.
 
 ### Text and Image Preprocessing with Keras and TensorFlow Hub
+
 **Text Preprocessing**
 TextVectorization Layer:
-
 Transforms text into numerical representations.
 Can build a vocabulary using adapt() method or use a predefined vocabulary.
 Provides multiple output modes:
 Default: Encodes words based on frequency.
 Multi-hot/Count: Encodes word occurrences.
 TF-IDF: Adjusts weights based on term frequency and document frequency.
-**Limitations of TextVectorization**
 
+**Limitations of TextVectorization**
 Works for space-separated languages.
 Loses word order and semantic relationships.
 Cannot handle subword tokenization or pretrained embeddings.
-Advanced Text Preprocessing:
 
+**Advanced Text Preprocessing**
 TensorFlow Text library offers subword tokenizers.
 Pretrained models from TensorFlow Hub or Hugging Face provide embeddings and contextual understanding.
 Image Preprocessing
-**Basic Image Layers**
 
+**Basic Image Layers**
 Resizing: Adjusts image size with optional cropping to maintain aspect ratio.
 Rescaling: Scales pixel values to a desired range.
 CenterCrop: Crops the center of an image to specified dimensions.
-**Data Augmentation**
 
+
+**Data Augmentation**
 Includes layers like RandomFlip, RandomRotation, RandomZoom, and more.
 Active only during training to expand dataset size and improve model generalization.
-**Pretrained Models for NLP**
 
+**Pretrained Models for NLP**
 TensorFlow Hub modules provide pretrained embeddings, e.g., nnlm-en-dim50.
 Hugging Face offers powerful, versatile models for NLP and other domains.
 
