@@ -61,6 +61,8 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                           | Building an agent that learns good strategies through trial and error (reinforcement learning) | [Link](#) |
 |                                           | Loading and preprocessing large amounts of data efficiently                            | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Loading%20and%20preprocessing%20large%20amounts%20of%20data%20efficiently) |
 |                                           | Training and deploying TensorFlow models at scale                                      | [Link](#) |
+|                                           | Deep Computer Vision Using Convolutional Neural Networks                               | [Link](#) |
+
 ---
 ## Working with Real Data
 
