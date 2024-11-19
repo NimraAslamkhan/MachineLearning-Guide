@@ -59,7 +59,7 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                           | Important neural net architectures: feedforward, convolutional, recurrent, LSTM, encoder-decoder, transformers, autoencoders, GANs, diffusion models | [Link](#) |
 |                                           | Techniques for training deep neural nets                                                | [Link](#) |
 |                                           | Building an agent that learns good strategies through trial and error (reinforcement learning) | [Link](#) |
-|                                           | Loading and preprocessing large amounts of data efficiently                            | [Link](#) |
+|                                           | Loading and preprocessing large amounts of data efficiently                            | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Loading%20and%20preprocessing%20large%20amounts%20of%20data%20efficiently) |
 |                                           | Training and deploying TensorFlow models at scale                                      | [Link](#) |
 ---
 ## Working with Real Data
