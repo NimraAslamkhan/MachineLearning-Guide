@@ -1,4 +1,4 @@
-# Understanding Convolutional Neural Networks (CNNs)
+#  Convolutional Neural Networks (CNNs)
 
 This repository provides an in-depth overview of Convolutional Neural Networks (CNNs), covering their biological inspiration, architecture, and implementation using Keras.
 
