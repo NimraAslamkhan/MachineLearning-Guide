@@ -248,7 +248,7 @@ import tensorflow as tf
 # Max Pooling Layer
 max_pool = tf.keras.layers.MaxPool2D(pool_size=2)
 
-
+```
 ## Benefits of Pooling
 **Reduced Dimensions**
 Shrinks the input size, reducing computation and memory overhead.
@@ -332,36 +332,44 @@ Each of these architectures introduced new concepts that shaped modern deep lear
 
 For object detection, where the task involves classifying and localizing multiple objects in an image, a fully convolutional network (FCN) can be used to speed up the sliding CNN approach. However, a more common and advanced technique is the YOLO (You Only Look Once) model or Faster R-CNN, which are optimized for detecting multiple objects in an image.
 
-In the sliding CNN approach:
+### In the sliding CNN approach
 
 You slide the model across different regions of the image.
 Each region will give predictions about the presence of an object and the corresponding bounding box.
 Non-Maximum Suppression (NMS) is then applied to remove redundant bounding boxes and select the most confident ones
 
 
-Fully Convolutional Networks (FCNs)
+### Fully Convolutional Networks (FCNs)
+
 FCNs are a type of neural network introduced in 2015 by Jonathan Long et al. for semantic segmentation, where the task is to classify every pixel in an image according to the object it belongs to. FCNs revolutionized image segmentation tasks by replacing the traditional dense (fully connected) layers in a CNN with convolutional layers.
 
-Dense vs. Convolutional Layers in FCNs
+### Dense vs. Convolutional Layers in FCNs
+
 In a traditional CNN, dense layers are typically used at the top to output class scores. Consider a dense layer with 200 neurons connected to a convolutional layer that outputs 100 feature maps of size 7 × 7. The dense layer would compute a weighted sum of all activations in the feature maps, flattening them to a vector. By contrast, if we replace the dense layer with a convolutional layer using 200 filters of size 7 × 7, we get output feature maps of size 1 × 1. This convolutional layer performs the same operation as the dense layer but in a more spatially aware way.
 
 A key advantage of this is that FCNs can process images of any size without needing to reshape the image or perform flattening before applying the final predictions. FCNs are more flexible in terms of input sizes, as their operations work in the spatial domain rather than requiring fixed input shapes.
 
-Example of FCN in Action
+### Example of FCN in Action
+
 Imagine a 224 × 224 input image fed into an FCN that has a bottleneck layer outputting 7 × 7 feature maps. If we feed in a 448 × 448 image, the bottleneck layer will output 14 × 14 feature maps. Using a convolutional layer with 10 filters (of size 7 × 7), the output will be a set of 8 × 8 feature maps. This is an efficient way of processing the image at multiple scales.
 
 The network processes the entire image at once, producing a grid of predictions rather than a single label per image. This approach is much more efficient than traditional CNNs because it avoids redundant computations, especially in object detection tasks like YOLO.
 
-YOLO (You Only Look Once)
+### YOLO
+(You Only Look Once)
 YOLO is a famous object detection model developed by Joseph Redmon in 2015. It is designed to detect objects in real-time with high speed and accuracy, processing images in a single pass.
 
-YOLO's Approach: For each grid cell of the image, YOLO predicts multiple bounding boxes (typically 2 per grid cell), along with class probabilities and objectness scores. This allows the model to handle overlapping objects in a more efficient manner.
+### YOLO's Approach
+For each grid cell of the image, YOLO predicts multiple bounding boxes (typically 2 per grid cell), along with class probabilities and objectness scores. This allows the model to handle overlapping objects in a more efficient manner.
 
 YOLO divides the image into a grid and predicts the class of the object within each grid cell. For example, it might predict the bounding box and class label for a person standing near a car, even if their centers fall in the same grid cell.
 
-Bounding Box Predictions: YOLO uses a grid-based approach where each grid cell is responsible for predicting bounding boxes relative to that cell. The bounding box can extend beyond the grid cell, and the class probability distribution is shared across all boxes within that grid.
+### Bounding Box Predictions
 
-YOLO Versions and Advancements
+YOLO uses a grid-based approach where each grid cell is responsible for predicting bounding boxes relative to that cell. The bounding box can extend beyond the grid cell, and the class probability distribution is shared across all boxes within that grid.
+
+### YOLO Versions and Advancements
+
 The YOLO architecture has undergone multiple improvements with each version, including:
 
 - YOLOv2: Introduced anchor boxes and improved speed and accuracy.
@@ -370,13 +378,17 @@ The YOLO architecture has undergone multiple improvements with each version, inc
 
 Each version uses various techniques such as skip connections, anchor priors, and more bounding boxes to handle complex object detection tasks.
 
-Object Detection Alternatives: SSD, Faster R-CNN, and EfficientDet
-Other object detection models include:
+### Object Detection Alternatives
+
+SSD, Faster R-CNN, and EfficientDet
+
+### Other object detection models include
 
 - SSD (Single Shot Multibox Detector) and EfficientDet, which are similar to YOLO in that they perform object detection in a single pass.
 - Faster R-CNN, which is more complex, combining a region proposal network (RPN) to propose bounding boxes and a CNN classifier for each box.
 
-Object Tracking with DeepSORT
+### Object Tracking with DeepSORT
+
 DeepSORT is an object tracking algorithm combining classical algorithms (e.g., Kalman filters) with deep learning to track objects in video sequences. The key steps in DeepSORT are:
 
 - Kalman Filter: Predicts the movement of objects based on their previous states.
@@ -385,11 +397,13 @@ DeepSORT is an object tracking algorithm combining classical algorithms (e.g., K
 
 This system is particularly useful for tracking objects across video frames while accounting for occlusions, object interactions, and changes in appearance.
 
-Semantic Segmentation with FCNs
+### Semantic Segmentation with FCNs
+
 Semantic segmentation goes a step further than object detection by classifying each pixel in an image. Traditional CNNs lose spatial resolution due to pooling and strides, which makes it difficult to predict pixel-level labels.
 
 The solution introduced by FCNs involves upsampling the feature maps, which were downsampled due to pooling, to recover spatial resolution. This is typically done using transposed convolutions, also known as deconvolutions. This technique upsamples the image by inserting zeros between the pixels (or using fractional strides) and then applying a regular convolution, which allows for precise pixel-level predictions.
 
-Upsampling with Transposed Convolutions
+### Upsampling with Transposed Convolutions
+
 Transposed convolution allows FCNs to upscale feature maps to the original image size, thereby achieving high-resolution segmentation maps. By learning to refine the pixel predictions during training, the network can provide more accurate pixel-wise segmentation, which is especially useful in applications like autonomous driving (where detecting road, pedestrians, and cars at the pixel level is critical).
 
