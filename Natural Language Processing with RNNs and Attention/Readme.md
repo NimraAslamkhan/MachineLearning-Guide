@@ -49,4 +49,57 @@ Pretrained embeddings and language models like the Universal Sentence Encoder ca
 Models are often fine-tuned during training for task-specific improvements, leveraging the general language understanding learned from massive corpora.
 
 
+# The Encoder-Decoder Network for Neural Machine Translation (NMT) model:
 
+## Overview
+This simple NMT model translates English sentences to Spanish using an Encoder-Decoder architecture with LSTM layers.
+
+## Key Concepts
+Encoder: Processes the English sentence into a hidden state.
+Decoder: Generates the Spanish sentence based on the encoder's hidden state.
+Teacher Forcing: During training, the decoder is fed the correct previous word instead of its own output, speeding up training.
+Start-of-Sequence (SOS) & End-of-Sequence (EOS) Tokens:
+SOS token is the initial input for the decoder.
+EOS token marks the sentence's end.
+Process
+
+## Data Preparation:
+
+Download an English-Spanish sentence pair dataset.
+Preprocess: Remove unnecessary characters, shuffle, and split data into training and validation sets.
+Tokenize sentences using two TextVectorization layers:
+One for English sentences.
+One for Spanish sentences (with SOS and EOS tokens).
+Model Architecture:
+
+## Encoder:
+Text is tokenized and embedded using an Embedding layer.
+A single LSTM layer generates the encoder's hidden states.
+
+## Decoder:
+
+Takes Spanish inputs (with SOS token) and generates embeddings.
+LSTM layer processes embeddings, initialized with the encoder's hidden states.
+Dense layer with softmax activation predicts probabilities for each word in the Spanish vocabulary.
+
+
+## Training:
+
+Loss: sparse_categorical_crossentropy
+Optimizer: Nadam
+Metrics: Accuracy
+Training: Use teacher forcing by shifting target Spanish sentences during training.
+
+## Inference:
+
+During prediction, the decoder uses its previous output (not the ground truth) as input.
+A utility function iteratively predicts one word at a time until reaching the EOS token.
+Example Translation:
+Input: "I like soccer"
+Output: "me gusta el fútbol"
+
+## Improvements:
+Increase dataset size.
+Use deeper architectures with more LSTM layers.
+Explore advanced techniques like bidirectional layers for better performance.
+This basic model is functional but struggles with long or complex sentences, highlighting the need for further refinements.
