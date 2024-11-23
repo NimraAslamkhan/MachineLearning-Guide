@@ -146,3 +146,174 @@ Subword techniques (e.g., BPE) can enhance generalization for rare words.
 ##  Potential Improvements
 Use pre-trained embeddings (e.g., GloVe or FastText) for better initial representations.
 Explore advanced architectures like bidirectional GRUs/LSTMs or Transformer-based models for further accuracy improvements.
+
+# Reusing Pretrained Embeddings and Language Models
+
+Pretrained Word Embeddings:
+
+Previously, word embeddings like Word2Vec, GloVe, and FastText, trained on large text corpora, were widely used for tasks like sentiment analysis. These embeddings cluster similar words (e.g., "awesome" and "amazing") in the embedding space.
+Limitation: They provide a single representation per word, ignoring contextual differences (e.g., "right" in "left and right" vs. "right and wrong").
+## Contextualized Embeddings:
+
+ELMo (2018): Introduced contextualized embeddings by leveraging deep bidirectional language models to account for context-specific word meanings.
+ULMFiT (2018): Demonstrated the power of unsupervised pretraining using LSTM-based language models. Fine-tuning pretrained models reduced error rates on text classification tasks significantly, marking the start of pretrained models dominating NLP.
+
+## Pretrained Language Models:
+
+Today, reusing pretrained models (e.g., transformers) is standard in NLP. These models excel in generalizing across tasks and domains.
+Universal Sentence Encoder (USE):
+
+A transformer-based model by Google, available via TensorFlow Hub, can be fine-tuned for specific tasks like sentiment analysis.
+
+
+Models like USE can achieve over 90% validation accuracy on sentiment analysis tasks, rivaling human performance, particularly on ambiguous reviews. 
+
+Encoder-Decoder Network for Neural Machine Translation (NMT)
+Overview:
+An Encoder-Decoder network is designed to translate English sentences to Spanish. The model uses teacher forcing during training, where the decoder is fed the target word from the previous step, enabling faster and more effective training. At inference time, the model predicts translations word by word using its prior outputs.
+
+# Steps to Build the Model:
+
+## Dataset Preparation:
+
+Download the English-Spanish sentence pairs dataset.
+Preprocess data by removing special Spanish characters (¡, ¿) and splitting sentences into English and Spanish lists.
+Shuffle and split data into training and validation sets.
+Text Vectorization:
+
+Create two TextVectorization layers, one for each language.
+Limit vocabulary size to 1,000 for simplicity and efficiency.
+Set sequence length to 50 tokens for uniformity.
+Add "startofseq" (SOS) and "endofseq" (EOS) tokens for Spanish sentences.
+Model Architecture:
+
+Encoder: An embedding layer followed by a single LSTM layer. It encodes the English sentence and outputs the final LSTM states.
+Decoder: Another embedding layer followed by an LSTM. The decoder uses the encoder's final state as its initial state.
+Output Layer: A dense layer with softmax activation outputs probabilities for each word in the Spanish vocabulary.
+Training:
+
+Use sparse_categorical_crossentropy as the loss function.
+Train the model using paired inputs: English sentences for the encoder and Spanish sentences prefixed with "startofseq" for the decoder.
+Target sentences are shifted to include the "endofseq" token.
+Translation at Inference Time:
+
+The decoder sequentially generates one word at a time, using the previous output as input until the "endofseq" token is reached.
+A utility function predicts translations iteratively for each word.
+Limitations:
+
+The model struggles with longer or more complex sentences due to limited data, vocabulary size, and model depth.
+
+
+# Improvements:
+
+Increase training data size.
+Use more sophisticated architectures, like bidirectional LSTMs or attention mechanisms.
+Expand the vocabulary size and incorporate pre-trained embeddings.
+
+### Example:
+
+Input: "I like soccer"
+Output: "me gusta el fútbol"
+For longer sentences like "I like soccer and also going to the beach", the model may misinterpret due to its simplicity, highlighting the need for further enhancements.
+
+Bidirectional RNNs and Beam Search
+
+### Bidirectional RNNs:
+
+Causal limitation of regular RNNs: They process inputs sequentially, only considering past and present information, which is suitable for tasks like forecasting or sequence decoding.
+
+### Bidirectional RNNs: 
+For tasks like text classification or sequence encoding, they use two RNN layers:
+One processes inputs left-to-right.
+The other processes inputs right-to-left.
+Outputs from both layers are combined (e.g., concatenated) at each time step, allowing the model to consider both past and future context.
+
+### Challenge in sequence-to-sequence models:
+
+Bidirectional layers produce four states (forward and backward short-term and long-term states), while the decoder expects two (short-term and long-term states).
+
+Solution: Concatenate the forward and backward states to create two states compatible with the decoder.
+
+### Beam Search:
+
+Problem: Standard encoder-decoder models may make irreversible mistakes while generating sequences.
+
+### Solution - Beam Search:
+
+Keeps track of the top k most likely sequences at each decoding step (beam width k).
+Extends each sequence by one word, evaluates probabilities for all extensions, and retains only the k most probable sequences.
+
+Ensures better translation accuracy by reconsidering earlier choices and retaining promising candidates.
+
+### Example of Beam Search:
+Start decoding with probabilities for the first word.
+E.g., top candidates: "me" (75%), "a" (3%), "como" (1%).
+Extend each candidate with the next word based on conditional probabilities.
+For "me": "gustan" (36%), "gusta" (32%), "encanta" (16%).
+Compute probabilities for all resulting two-word sentences (e.g., "me gustan" = 75% × 36% = 27%).
+Keep the top k sentences.
+Repeat the process for subsequent words until the sequence is complete.
+E.g., "me gusta el fútbol" emerges as the top translation over time.
+
+### Limitations:
+Beam Search improves performance but does not solve memory issues for long sequences in RNNs.
+Attention mechanisms are needed to handle long-term dependencies effectively. 
+
+# Attention Mechanisms and Transformers
+## Attention Mechanisms
+### Problem Addressed:
+
+Traditional RNN-based encoder-decoder models need to carry context through many time steps, leading to information loss in long sentences.
+
+## Introduction of Attention:
+
+Allows the decoder to focus on relevant parts of the input sentence at each decoding step.
+Shortens the effective path from input to output, reducing the impact of RNN memory limitations.
+
+## How it Works:
+
+The decoder uses a weighted sum of all encoder outputs at each time step.
+Weights (
+𝛼
+α) are computed by an alignment model (or attention layer) based on the decoder’s state and encoder outputs.
+This mechanism dynamically determines the importance of each encoder output.
+
+## Types of Attention:
+
+## Bahdanau Attention (Additive):
+
+Combines encoder outputs and decoder’s previous hidden state.
+Scores are computed using a trainable function and passed through a softmax layer.
+
+## Luong Attention (Multiplicative):
+Uses the dot product for similarity computation, offering efficiency and simplicity.
+Variants include "general" (transformed encoder outputs) and standard dot product mechanisms.
+
+## Implementation in Keras:
+
+tf.keras.layers.Attention: Implements Luong attention.
+tf.keras.layers.AdditiveAttention: Implements Bahdanau attention.
+Transformers: Attention Is All You Need
+
+## Key Innovation:
+
+A model architecture that uses only attention mechanisms (no RNNs or CNNs).
+Revolutionized tasks like Neural Machine Translation (NMT).
+
+## Advantages:
+
+Avoids vanishing/exploding gradients.
+Highly parallelizable, enabling efficient training.
+Handles long-range dependencies better than RNNs.
+
+## Architecture:
+
+### Encoder:
+Gradually transforms input embeddings into context-rich representations.
+Captures word meanings in sentence context.
+
+### Decoder:
+Transforms each translated word into the representation of the next word.
+Predicts output words using a Dense layer with softmax activation.
+
+
