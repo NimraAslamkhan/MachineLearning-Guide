@@ -60,7 +60,7 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                           | Techniques for training deep neural nets                                                | [Link](#) |
 |                                           | Building an agent that learns good strategies through trial and error (reinforcement learning) | [Link](#) |
 |                                           | Loading and preprocessing large amounts of data efficiently                            | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Loading%20and%20preprocessing%20large%20amounts%20of%20data%20efficiently) |
-|                                           | Training and deploying TensorFlow models at scale                                      | [Link](#) |
+|                                           | Training and deploying TensorFlow models at scale                                      | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Training%20and%20Deploying%20TensorFlow%20Models%20) |
 |                                           | Deep Computer Vision Using Convolutional Neural Networks                               | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Deep%20Computer%20Vision%20Using%20Convolutional%20Neural%20Networks) |
 
 ---
