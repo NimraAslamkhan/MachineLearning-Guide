@@ -64,7 +64,7 @@ The book is organized into two parts, each covering essential topics in machine 
 |                                           | Deep Computer Vision Using Convolutional Neural Networks                               | [Link](https://github.com/NimraAslamkhan/MachineLearning-Guide/tree/main/Deep%20Computer%20Vision%20Using%20Convolutional%20Neural%20Networks) |
 
 ---
-## Working with Real Data
+## Working with Real Data 
 
 When learning about machine learning, experimenting with real-world data is essential, as it provides a more practical understanding than artificial datasets. Fortunately, there are thousands of open datasets available across various domains. Here are a few resources to find data:
 
